@@ -1,0 +1,27 @@
+services:
+  - type: web
+    name: lavalust-lab4
+    runtime: docker
+    plan: free
+    dockerfilePath: ./dockerfile
+    dockerContext: .
+    healthCheckPath: /
+    envVars:
+      - key: APP_ENV
+        value: production
+      - key: DB_DRIVER
+        value: mysql
+      - key: DB_HOST
+        sync: false
+      - key: DB_PORT
+        value: "20015"
+      - key: DB_USER
+        value: avnadmin
+      - key: DB_PASSWORD
+        sync: false
+      - key: DB_NAME
+        value: defaultdb
+      - key: DB_CHARSET
+        value: utf8mb4
+      - key: DB_SSL_MODE
+        value: REQUIRED
