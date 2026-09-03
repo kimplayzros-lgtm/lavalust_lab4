@@ -63,7 +63,7 @@ $database['main'] = array(
     'port'     => getenv('DB_PORT') ?: '20015',
     'username' => getenv('DB_USER') ?: 'avnadmin',
     'password'	=> getenv('DB_PASSWORD') ?: '',
-    'database' => getenv('DB_NAME') ?: 'defaultdb',
+    'database' => getenv('DB_NAME') ?: 'mydb',
     'charset'  => getenv('DB_CHARSET') ?: 'utf8mb4',
     'dbprefix'	=> getenv('DB_PREFIX') ?: '',
     // Optional for SQLite
