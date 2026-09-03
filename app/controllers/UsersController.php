@@ -13,7 +13,7 @@ class UsersController extends Controller
     {
         $this->call->model('UsersModel');
 
-        $data['users'] = $this->UsersModel->order_by('id', 'ASC')->all();
+        $data['users'] = $this->UsersModel->order_by('id', 'ASC');
         $this->call->view('users', $data);
     }
 }
