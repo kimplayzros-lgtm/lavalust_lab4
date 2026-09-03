@@ -8,15 +8,23 @@ $users = is_array($users ?? null) ? $users : [];
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Users</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 2rem; color: #202124; }
-        main { max-width: 960px; margin: 0 auto; }
-        h1 { margin-bottom: 0.35rem; }
-        .summary { color: #5f6368; margin-top: 0; }
-        table { width: 100%; border-collapse: collapse; margin-top: 1.5rem; }
-        th, td { border: 1px solid #d0d7de; padding: 0.75rem; text-align: left; }
-        th { background: #f6f8fa; }
-        tbody tr:nth-child(even) { background: #fbfcfd; }
-        .empty { color: #5f6368; text-align: center; }
+        :root { --black: #0b0b0d; --red: #d71920; --white: #ffffff; --soft-white: #f5f5f5; --line: #3a3a3d; }
+        * { box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; margin: 0; min-height: 100vh; background: var(--black); color: var(--white); }
+        main { max-width: 960px; margin: 0 auto; padding: 3rem 1.25rem; }
+        h1 { margin: 0; border-left: 6px solid var(--red); padding-left: 0.8rem; font-size: clamp(2rem, 5vw, 3rem); letter-spacing: 0; }
+        .summary { color: #d9d9d9; margin: 0.75rem 0 0; }
+        table { width: 100%; border-collapse: collapse; margin-top: 2rem; background: var(--white); color: #111111; box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35); }
+        th, td { border: 1px solid var(--line); padding: 0.85rem 0.75rem; text-align: left; }
+        th { background: var(--red); color: var(--white); font-weight: 700; }
+        tbody tr:nth-child(even) { background: var(--soft-white); }
+        tbody tr:hover { background: #ffd9da; }
+        .empty { color: #555555; text-align: center; }
+        @media (max-width: 640px) {
+            main { padding: 2rem 0.75rem; }
+            table { font-size: 0.85rem; }
+            th, td { padding: 0.65rem 0.45rem; }
+        }
     </style>
 </head>
 <body>
